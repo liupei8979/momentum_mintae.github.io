@@ -12,14 +12,14 @@ body {
 }
 
 #bgImage {
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-width: 100%;
-  min-width: 1880px;
-  max-height: 1400px;
-  min-height: 1200px;
-  z-index: -5;
+  position:absolute;
+  left:0;
+  top:0;
+max-width:100%;
+  min-width:1880px;;
+  max-height:1400px;
+  min-height:1200px;
+  z-index:-5;
   filter: brightness(30%);
 }
 
@@ -45,7 +45,6 @@ body {
 }
 
 #login-form input:hover::-webkit-input-placeholder {
-  /*placeholder color change*/
   color: rgb(50, 50, 50);
 }
 
@@ -123,7 +122,6 @@ body {
 }
 
 #todo-form input:hover::-webkit-input-placeholder {
-  /*placeholder color change*/
   color: rgb(50, 50, 50);
 }
 
@@ -193,11 +191,11 @@ body {
   }
 
   #bgImage {
-    min-width: auto;
-    max-height: auto;
-    min-height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
   }
-
   #clock {
     font-size: 5rem;
   }
@@ -214,3 +212,4 @@ body {
     width: 100%;
   }
 }
+

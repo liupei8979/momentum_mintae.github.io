@@ -6,6 +6,13 @@ let toDos = [];
 
 const TODOS_KEY = "todos";
 
+function playButtonClickSound() {
+    // 효과음 재생 코드 작성
+    // 예시로는 'click_sound.mp3' 파일을 재생하는 것으로 가정합니다.
+    const audio = new Audio('./sound/MP_전자 버튼음 - 2.mp3');
+    audio.play();
+  }
+
 function saveToDos(){
     // toDos array를 locarstorage에 저장
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -16,6 +23,9 @@ function deleteToDo(event){
     toDos = toDos.filter(todo => todo.id !== parseInt(deleteLi.id)); // li의 id와 변수의 id가 다를 때 true -> 클릭한 li.id와 todo.id가 같은 요소는 false이므로 새로 형성할 배열에서 제외  
     saveToDos(); 
     deleteLi.remove(); // = delete parent li
+
+ // 효과음 재생 함수 호출
+    playButtonClickSound();
  }
 
 function paintToDo(newTodo){
@@ -45,6 +55,9 @@ function handleToDoSubmit(event){
     toDos.push(newTodoObj); // toDos arry에 vlaue 저장
     paintToDo(newTodoObj);
     saveToDos();
+    // 효과음 재생 함수 호출
+  playButtonClickSound();
+    
 }
 toDoForm.addEventListener("submit",handleToDoSubmit);
 
