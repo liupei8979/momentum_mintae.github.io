@@ -12,14 +12,13 @@ body {
 }
 
 #bgImage {
-  position:absolute;
-  left:0;
-  top:0;
-  max-width:100%;
-  min-width:1880px;;
-  max-height:1400px;
-  min-height:1200px;
-  z-index:-5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -5;
   filter: brightness(30%);
 }
 
@@ -186,16 +185,6 @@ body {
   text-align: right;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-#weather {
-  position: fixed;
-  top: 20px;
-  right: 36px;
-  color: white;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: right;
-}
 
 #weather span {
   display: block;
@@ -214,7 +203,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* 반응형 쿼리 추가 */
+/* 모바일 화면 크기에 대한 반응형 쿼리 */
 @media only screen and (max-width: 600px) {
   body {
     padding-top: 100px;
@@ -226,6 +215,7 @@ body {
     width: auto;
     height: auto;
   }
+
   #clock {
     font-size: 5rem;
   }
