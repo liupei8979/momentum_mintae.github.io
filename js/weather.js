@@ -1,28 +1,19 @@
-const API_KEY = "6af213b58ec1dbbaa704dfc82d187d76";
+const API_KEY = "44e31e73aec402baf02f60ad8b75e464";
 
-
-function onGeoOK(position){
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const url =
-     `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`; // call API 
-
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        const weather = document.querySelector("#weather span:first-child");
-        const city = document.querySelector("#weather span:nth-child(2)");
-        const temp = document.querySelector("#weather span:last-child");
-        const name = data.name;
-        weather.innerText = data.weather[0].main;
-        city.innerText = data.name;
-        temp.innerText = `${Math.floor(data.main.temp)}˚C`;})
-    // Javascript가 브라우저에 요청하여 API url에 방문하지 않아도 url내부의 자체정보를 브라우저로 가져옴 (Network 탭에서 확인)
-    
-    }
-
-function onGeoError(){
-    alert("Can't find you!");
+function onGeoOk(position){
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  console.log("You Live in", lat, lon);
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  fetch(url).then(response => response.json().then(data => {
+    const weather =  document.querySelector("#weather span:first-child");
+    const city = document.querySelector("#weather span:last-child");
+    city.innerText = data.name;
+    weather.innerText = `${Math.floor(data.main.temp)}°C ${data.weather[0].main}`;
+  }));
 }
 
-navigator.geolocation.getCurrentPosition(onGeoOK,onGeoError);
+function onGeoError(){
+  alert("Can't find you. No weather for you.")
+}
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
