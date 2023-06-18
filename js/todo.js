@@ -9,7 +9,7 @@ const TODOS_KEY = "todos";
 function playButtonClickSound() {
     // 효과음 재생 코드 작성
     // 예시로는 'click_sound.mp3' 파일을 재생하는 것으로 가정합니다.
-    const audio = new Audio('./sound/MP_전자 버튼음 - 2.mp3');
+    const audio = new Audio('https://drive.google.com/file/d/1UNRt4Y03BX4zsBAjyGtAvLTszJdU9wqv/view?usp=sharing');
     audio.play();
   }
 
