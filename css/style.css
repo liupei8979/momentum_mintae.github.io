@@ -206,8 +206,7 @@ body {
 }
 
 
-/* 모바일용 CSS */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   body {
     padding-top: 100px;
   }
