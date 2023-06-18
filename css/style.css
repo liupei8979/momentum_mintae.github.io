@@ -15,7 +15,7 @@ body {
   position:absolute;
   left:0;
   top:0;
-max-width:100%;
+  max-width:100%;
   min-width:1880px;;
   max-height:1400px;
   min-height:1200px;
@@ -180,8 +180,38 @@ max-width:100%;
   top: 20px;
   right: 36px;
   color: white;
-  font-size: 0.9rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#weather {
+  position: fixed;
+  top: 20px;
+  right: 36px;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+#weather span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#weather span:first-child {
+  font-size: 1.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+#weather span:last-child {
+  font-size: 1.8rem;
+  color: #ffce00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* 반응형 쿼리 추가 */
