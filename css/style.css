@@ -12,18 +12,25 @@ body {
   font-family: 'Baloo Tammudu 2', 'Noto Sans KR', sans-serif;
 }
 
-#bgImage {
-  position:absolute;
-  left:0;
-  top:0;
-  max-width:100%;
-  min-width:1880px;;
-  max-height:1400px;
-  min-height:1200px;
-  z-index:-5;
-  filter: brightness(30%);
+#reset {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
 }
 
+
+#bgImage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-height: 1400px;
+  min-height: 1200px;
+  z-index: -5;
+  filter: brightness(30%);
+}
 #login-form {
   text-align: center;
   color: white;
@@ -236,3 +243,7 @@ body {
 }
 
 
+.strikethrough {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
