@@ -212,25 +212,35 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
 @media only screen and (max-width: 600px) {
   body {
-    padding-top: 100px;
+    padding-top: 0;
   }
 
   #bgImage {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    filter: brightness(30%);
   }
 
   #clock {
+    height: calc(100vh - 260px);
     font-size: 5rem;
   }
 
   #greeting {
+    margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 1.5rem;
+  }
+
+  #todo-form {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   #todo-form input {
