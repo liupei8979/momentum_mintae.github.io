@@ -220,9 +220,11 @@ body {
   #bgImage {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     z-index: -5;
     filter: brightness(30%);
   }
